@@ -8,6 +8,7 @@ class MeshBuilder {
     const geometry = GeometryBuilder.buildGeometry(options.geometry);
     const material = MaterialBuilder.buildMaterial(options.material);
     const mesh = new THREE.Mesh(geometry, material);
+    mesh.canSelect = options.canSelect;
     mesh.uuid = options.uuid;
 
     if (options.edgesMaterial) {

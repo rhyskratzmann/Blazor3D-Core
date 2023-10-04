@@ -239,7 +239,7 @@ class Viewer3D {
 
     this.raycaster.setFromCamera(this.mouse, this.camera);
     const intersects = this.raycaster.intersectObjects(
-      this.scene.children,
+      this.scene.children.filter(function(element){return element.canSelect == true}),
       true
     );
 

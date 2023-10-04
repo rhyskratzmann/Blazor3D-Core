@@ -42,6 +42,11 @@ namespace HomagGroup.Blazor3D.Core
         public Guid Uuid { get; set; } = Guid.NewGuid();
 
         /// <summary>
+        /// Object can be selected if viewer supports selection. Default is true.
+        /// </summary>
+        public bool CanSelect { get; set; } = true;
+
+        /// <summary>
         /// Collection of <see cref="Object3D"/> child objects.
         /// </summary>
         public List<Object3D> Children { get; set; } = new List<Object3D>();

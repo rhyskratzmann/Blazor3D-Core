@@ -197,6 +197,11 @@
             <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">Universal unique identifier</a> of this object instance. It's automatically assigned Guid, so it shouldn't be edited.
             </summary>
         </member>
+        <member name="P:HomagGroup.Blazor3D.Core.Object3D.CanSelect">
+            <summary>
+            Object can be selected if viewer supports selection. Default is true.
+            </summary>
+        </member>
         <member name="P:HomagGroup.Blazor3D.Core.Object3D.Children">
             <summary>
             Collection of <see cref="T:HomagGroup.Blazor3D.Core.Object3D"/> child objects.
