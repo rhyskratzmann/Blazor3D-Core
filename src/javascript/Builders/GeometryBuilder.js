@@ -12,6 +12,7 @@ class GeometryBuilder {
         options.depthSegments
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect;
       return geometry;
     }
 
@@ -23,6 +24,7 @@ class GeometryBuilder {
         options.radialSegments
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -34,6 +36,7 @@ class GeometryBuilder {
         options.thetaLength
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -48,6 +51,7 @@ class GeometryBuilder {
         options.thetaLength
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -63,6 +67,7 @@ class GeometryBuilder {
         options.thetaLength
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -72,6 +77,7 @@ class GeometryBuilder {
         options.detail
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -81,6 +87,7 @@ class GeometryBuilder {
         options.detail
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -90,6 +97,7 @@ class GeometryBuilder {
         options.detail
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -101,6 +109,7 @@ class GeometryBuilder {
         options.heightSegments
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -114,6 +123,7 @@ class GeometryBuilder {
         options.thetaLength
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -128,6 +138,7 @@ class GeometryBuilder {
         options.thetaLength
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -137,6 +148,7 @@ class GeometryBuilder {
         options.detail
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -149,6 +161,7 @@ class GeometryBuilder {
         options.arc
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -162,6 +175,7 @@ class GeometryBuilder {
         options.pq,
       );
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
@@ -170,21 +184,24 @@ class GeometryBuilder {
       shape.uuid = options.shape.uuid;
       const geometry = new THREE.ShapeGeometry(shape);
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
     if (options.type == "ExtrudeGeometry") {
       const shape = new THREE.Shape(options.shape.points);
       shape.uuid = options.shape.uuid;
-
+      shape.canSelect = options.canSelect;
       const geometry = new THREE.ExtrudeGeometry(shape, options.extrudeOptions);
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 
     if (options.type == "LineGeometry") {
       const geometry = new THREE.BufferGeometry().setFromPoints( options.points )
       geometry.uuid = options.uuid;
+      geometry.canSelect = options.canSelect
       return geometry;
     }
 

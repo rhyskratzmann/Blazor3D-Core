@@ -86,6 +86,8 @@ class Loaders {
     } );
   }
 
+  static load
+  
   static import3DModel(scene, settings, containerId) {
     const format = settings.format;
     let objUrl = settings.fileURL;

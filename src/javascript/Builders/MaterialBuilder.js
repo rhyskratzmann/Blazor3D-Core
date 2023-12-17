@@ -18,6 +18,7 @@ class MaterialBuilder {
         map: map
       });
       material.uuid = options.uuid;
+      material.canSelect = options.canSelect;
       return material;
     }
 
@@ -32,6 +33,7 @@ class MaterialBuilder {
         linewidth : options.lineWidth
       });
       material.uuid = options.uuid;
+      material.canSelect = options.canSelect;
       return material;
     }
   }

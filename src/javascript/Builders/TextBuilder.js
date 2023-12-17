@@ -21,6 +21,7 @@ class TextBuilder {
           const material = MaterialBuilder.buildMaterial(options.material);
           const mesh = new THREE.Mesh(geometry, material);
           mesh.uuid = options.uuid;
+          mesh.canSelect = options.canSelect;
           Transforms.setPosition(mesh, options.position);
           Transforms.setRotation(mesh, options.rotation);
           Transforms.setScale(mesh, options.scale);
@@ -31,6 +32,7 @@ class TextBuilder {
           Transforms.setPosition(strokeText, options.position);
           Transforms.setRotation(strokeText, options.rotation);
           Transforms.setScale(strokeText, options.scale);
+          strokeText.canSelect = options.canSelect;
           strokeText.uuid = options.uuid;
 
           const matDark = new THREE.MeshBasicMaterial({
@@ -40,6 +42,7 @@ class TextBuilder {
 
           geometry.forEach(element => {
             const strokeMesh = new THREE.Mesh(element, matDark);
+            strokeMesh.canSelect = options.canSelect;
             strokeText.add(strokeMesh);
           });
 

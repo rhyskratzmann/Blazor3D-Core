@@ -28,8 +28,8 @@ class Viewer3D {
       {
         antialias: this.options.viewerSettings.webGLRendererSettings.antialias,
         premultipliedAlpha: this.options.viewerSettings.webGLRendererSettings.premultipliedAlpha,
-        alpha: this.options.viewerSettings.webGLRendererSettings.alpha,
-      }
+        alpha: this.options.viewerSettings.webGLRendererSettings.alpha,   
+        }
     );
 
     if (this.options.viewerSettings.showViewHelper) {
@@ -239,7 +239,7 @@ class Viewer3D {
 
     this.raycaster.setFromCamera(this.mouse, this.camera);
     const intersects = this.raycaster.intersectObjects(
-      this.scene.children.filter(function(element){return element.canSelect == true}),
+      this.scene.children.filter(function(element){return element.canSelect != false}),
       true
     );
 
